@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Messages - Link Lace</title>
+  <link rel="stylesheet" href="css/style1.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">Link Lace</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li class="auth-buttons"><a href="log in sign up.html">Log in / Sign up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1 style="text-align:center; margin:20px 0 10px">Messages</h1>
+
+    <div class="messages-layout">
+      <aside class="inbox-list" aria-label="Conversations">
+        <div class="conversation-item active" data-id="1">
+          <img class="avatar" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><circle cx='20' cy='20' r='20' fill='%23e76f51'/></svg>" alt="Avatar">
+          <div class="conv-meta">
+            <div class="conv-name">Samir</div>
+            <div class="conv-preview">Hi — are you available for a 2-hour job?</div>
+          </div>
+          <div class="conv-time">2h</div>
+        </div>
+        <div class="conversation-item" data-id="2">
+          <img class="avatar" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><circle cx='20' cy='20' r='20' fill='%233b5998'/></svg>" alt="Avatar">
+          <div class="conv-meta">
+            <div class="conv-name">Nora</div>
+            <div class="conv-preview">Sent the files — please review.</div>
+          </div>
+          <div class="conv-time">1d</div>
+        </div>
+        <div class="conversation-item" data-id="3">
+          <img class="avatar" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><circle cx='20' cy='20' r='20' fill='%238a2be2'/></svg>" alt="Avatar">
+          <div class="conv-meta">
+            <div class="conv-name">Team</div>
+            <div class="conv-preview">Weekly sync tomorrow at 10am.</div>
+          </div>
+          <div class="conv-time">3d</div>
+        </div>
+      </aside>
+
+      <section class="message-thread" aria-label="Conversation">
+        <div class="thread-header">
+          <img class="avatar" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='44' height='44'><circle cx='22' cy='22' r='22' fill='%23e76f51'/></svg>" alt="Avatar">
+          <div>
+            <div class="thread-name">Samir</div>
+            <div class="thread-sub">Last seen 2 hours ago</div>
+          </div>
+        </div>
+
+        <div class="messages" id="messages">
+          <div class="msg">Hello! Thanks for reaching out. I'm free this afternoon.</div>
+          <div class="msg you">Great — can you start in an hour?</div>
+          <div class="msg">Yes, I'll be ready. Send the details.</div>
+        </div>
+
+        <div class="reply-box">
+          <input id="replyInput" placeholder="Write a message..." />
+          <button id="sendBtn" class="submit-btn">Send</button>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <script src="JS/script.js"></script>
+</body>
+</html>

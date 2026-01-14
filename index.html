@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Lace | Home</title>
+    <link rel="stylesheet" href="   css/style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <a href=index.html" class="logo">Link Lace</a>
+        <nav>
+            <ul>
+                <li><a href=index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="services.html"><i class="fas fa-th-large"></i> Services</a></li>
+                <li><a href="discover.html"><i class="fas fa-users"></i> Discover Talents</a></li>
+                <li><a href="jobs.html"><i class="fas fa-briefcase"></i> Find Jobs</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <a href="log in sign up.html" class="login-btn">Log In</a>
+            <a href="log in sign up.html" class="signup-btn" id="signupBtn">Sign Up</a>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Link Lace: Where talents meet projects.</h1>
+            <p>Discover top freelancers or find your next job opportunity in one place.</p>
+            <div class="role-switcher">
+                <button class="role-btn active" data-role="client">I'm Hiring (Client)</button>
+                <button class="role-btn" data-role="freelancer">I'm Looking for Work (Freelancer)</button>
+            </div>
+            <div class="search-bar">
+                
+                <input type="text" id="searchInput" placeholder="Search for a skill, service, or project...">
+                <button id="searchButton"><i class="fas fa-search"></i> Search</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-services">
+        <h2>Top Service Categories</h2>
+        <div class="services-grid">
+            <a class="service-card" href="jobs.html?category=web"><i class="fas fa-code"></i> <span>Web Development</span></a>
+            <a class="service-card" href="jobs.html?category=design"><i class="fas fa-paint-brush"></i> <span>Graphic Design</span></a>
+            <a class="service-card" href="jobs.html?category=writing"><i class="fas fa-pen-alt"></i> <span>Writing & Translation</span></a>
+        </div>
+        <div class="services-cta">
+            <a href="services.html" class="view-all-services-btn"><i class="fas fa-th-list"></i> Browse all services</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Link Lace. All rights reserved. <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a></p>
+    </footer>
+
+    <script src="JS/script.js"></script>
+</body>
+</html>

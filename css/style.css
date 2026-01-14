@@ -1,0 +1,131 @@
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: "Segoe UI", sans-serif; }
+
+body {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  height: 100vh; display: flex; align-items: center; justify-content: center;
+  backdrop-filter: blur(8px);
+}
+
+.wrapper {
+  position: relative;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  width: 800px; max-width: 100%;
+  display: flex; overflow: hidden;
+}
+
+.form-container { width: 50%; padding: 40px; z-index: 1; }
+.form-container h2 { margin-bottom: 20px; color: #333; }
+.form-container form { display: flex; flex-direction: column; }
+
+.form-container input { padding: 12px 15px; margin: 10px 0; border: 1px solid #ccc; border-radius: 10px; }
+.form-container input:focus { border: 2px solid #2a5298; outline: none; }
+
+.form-container button.submit-btn {
+  margin-top: 15px; padding: 12px; border: none;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: white; font-weight: bold; border-radius: 10px; cursor: pointer;
+  transition: background 0.3s ease;
+}
+.form-container button.submit-btn:hover { background: linear-gradient(to left, #1e3c72, #2a5298); }
+
+/* Blue Toggle with curved genie effect */
+.toggle-container {
+  width: 50%; height: 100%;
+  background: linear-gradient(to bottom right, #1e3c72, #2a5298);
+  color: white; display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+  padding: 40px; text-align: center;
+  position: absolute; top: 0; left: 0;
+  border-radius: 20px 0 0 20px;
+  z-index: 2;
+
+  transform-origin: left center;
+  transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1),
+              border-radius 0.8s ease-in-out,
+              clip-path 0.8s ease-in-out;
+  clip-path: ellipse(100% 120% at left center);
+}
+.wrapper.active .toggle-container {
+  transform: translateX(105%) scale(0.95, 1.05);
+  border-radius: 0 20px 20px 0;
+  clip-path: ellipse(100% 120% at right center);
+}
+
+.toggle-container h2 { margin-bottom: 20px; }
+.toggle-container p { margin-bottom: 20px; }
+.toggle-container button.switch-btn {
+  padding: 8px 25px; background: transparent;
+  border: 2px solid white; color: white;
+  border-radius: 10px; font-weight: bold;
+  cursor: pointer; transition: background 0.3s ease;
+}
+.toggle-container button.switch-btn:hover { background: rgba(255,255,255,0.2); }
+
+.form-container.signin, .form-container.login { display: block; }
+
+.forgot-password { color: #2a5298; margin-top: 8px; font-size: 0.9rem; cursor: pointer; text-decoration: underline; }
+
+.accept-terms { margin: 10px 0 0 0; font-size: 0.9rem; user-select: none; }
+.accept-terms input { margin-right: 8px; }
+
+.social-login { display: flex; justify-content: center; margin-top: 25px; gap: 15px; }
+.social-btn { width: 45px; height: 45px; border-radius: 10px; background: white; display: flex; justify-content: center; align-items: center; cursor: pointer; transition: background-color 0.3s ease; }
+.social-btn svg { width: 24px; height: 24px; transition: fill 0.3s ease; }
+.social-btn.google svg { fill: #db4437; } .social-btn.google:hover { background: #db4437; } .social-btn.google:hover svg { fill: white; }
+.social-btn.facebook svg { fill: #1877f2; } .social-btn.facebook:hover { background: #1877f2; } .social-btn.facebook:hover svg { fill: white; }
+.social-btn.github svg { fill: #333; } .social-btn.github:hover { background: #333; } .social-btn.github:hover svg { fill: white; }
+.social-btn.x svg { fill: #000; } .social-btn.x:hover { background: #000; } .social-btn.x:hover svg { fill: white; }
+
+@media screen and (max-width: 768px) {
+  .wrapper { flex-direction: column; }
+  .form-container, .toggle-container { width: 100%; }
+  .toggle-container { position: relative; clip-path: none; transform: none !important; }
+}
+
+/* Messages page styles */
+.messages-layout {
+  max-width: 1100px;
+  margin: 24px auto 60px;
+  display: flex;
+  gap: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(16,24,40,0.08);
+  overflow: hidden;
+}
+.inbox-list {
+  width: 320px;
+  border-right: 1px solid #f0f0f2;
+  overflow-y: auto;
+  background: #fafafa;
+}
+.conversation-item { display:flex; align-items:center; gap:12px; padding:12px 14px; cursor:pointer; border-bottom:1px solid #f3f3f3; }
+.conversation-item.active { background: linear-gradient(90deg,#f5f8ff,#ffffff); }
+.conversation-item:hover { background: #fff; }
+.conversation-item .avatar { width:44px; height:44px; border-radius:50%; flex:0 0 44px; }
+.conv-meta { flex:1; overflow:hidden; }
+.conv-name { font-weight:600; color:#0f1724; }
+.conv-preview { color:#606770; font-size:0.92rem; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; }
+.conv-time { color:#9aa0a6; font-size:0.85rem; margin-left:8px; }
+
+.message-thread { flex:1; display:flex; flex-direction:column; min-height:420px; }
+.thread-header { display:flex; align-items:center; gap:12px; padding:14px 18px; border-bottom:1px solid #f0f0f2; }
+.thread-header .avatar { width:48px; height:48px; }
+.thread-name { font-weight:700; }
+.thread-sub { color:#6b7280; font-size:0.9rem; }
+
+.messages { padding:18px; flex:1; overflow:auto; display:flex; flex-direction:column; gap:12px; background: linear-gradient(180deg,#fff,#fbfdff); }
+.msg { max-width:70%; padding:10px 14px; border-radius:12px; background:#f1f3f5; color:#0f1724; align-self:flex-start; box-shadow:0 1px 0 rgba(0,0,0,0.02); }
+.msg.you { align-self:flex-end; background: linear-gradient(90deg,#1e3c72,#2a5298); color: #fff; }
+
+.reply-box { display:flex; gap:8px; padding:12px; border-top:1px solid #f0f0f2; }
+.reply-box input { flex:1; padding:10px 12px; border:1px solid #e6e9ee; border-radius:10px; }
+.reply-box .submit-btn { padding:8px 16px; border-radius:10px; }
+
+@media screen and (max-width: 768px) {
+  .messages-layout { flex-direction:column; margin:12px; }
+  .inbox-list { width:100%; max-height:220px; order:2; }
+  .message-thread { order:1; }
+}

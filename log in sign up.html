@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- removed automatic refresh -->
+  <title>Login & Sign Up</title>
+  <link rel="stylesheet" href="css/style.css">
+    <style>
+      /* small utility: hide-only-for-visual users (screen-reader text) */
+      .sr-only { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    </style>
+</head>
+<body>
+
+<div class="wrapper" id="formWrapper">
+  <!-- Login Form -->
+    <div class="form-container login">
+    <h2>Login</h2>
+    <form id="loginForm" aria-label="Login form">
+      <label for="loginEmail" class="sr-only">Email</label>
+      <input id="loginEmail" name="email" type="email" placeholder="Email" required />
+      <label for="loginPassword" class="sr-only">Password</label>
+      <input id="loginPassword" name="password" type="password" placeholder="Password" required />
+      <div class="forgot-password" tabindex="0">Forgot password?</div>
+      <button type="submit" class="submit-btn">Login</button>
+      <div class="social-login">
+        <div class="social-btn google" title="Sign in with Google"><svg viewBox="0 0 24 24"><path d="M21.805 10.023h-9.31v3.953h5.675c-.234 1.255-1.413 3.685-5.675 3.685-3.417 0-6.195-2.827-6.195-6.31s2.778-6.31 6.195-6.31c1.943 0 3.25.832 4 1.547l2.728-2.618C16.88 4.256 14.812 3.5 12.062 3.5 6.626 3.5 2 8.012 2 13.5s4.626 10 10.062 10c5.799 0 9.67-4.063 9.67-9.81 0-.662-.067-1.163-.07-1.157z"/></svg></div>
+        <div class="social-btn facebook" title="Sign in with Facebook"><svg viewBox="0 0 24 24"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.326v21.348C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.41c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.466.099 2.797.143v3.243l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.31h3.59l-.467 3.622h-3.123V24h6.116C23.407 24 24 23.407 24 22.674V1.326C24 .593 23.407 0 22.675 0z"/></svg></div>
+        <div class="social-btn github" title="Sign in with GitHub"><svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.207 11.387.6.11.793-.258.793-.577v-2.02c-3.338.726-4.033-1.61-4.033-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.744.084-.729.084-.729 1.205.086 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.776.42-1.305.763-1.605-2.665-.3-5.466-1.333-5.466-5.93 0-1.31.47-2.38 1.236-3.22-.123-.302-.536-1.516.117-3.162 0 0 1.008-.322 3.3 1.23a11.49 11.49 0 013.003-.404c1.02.005 2.045.137 3.003.404 2.29-1.553 3.297-1.23 3.297-1.23.655 1.646.242 2.86.12 3.162.77.84 1.236 1.91 1.236 3.22 0 4.61-2.807 5.625-5.48 5.922.432.372.817 1.103.817 2.222v3.293c0 .321.192.694.8.576C20.565 21.796 24 17.298 24 12c0-6.63-5.373-12-12-12z"/></svg></div>
+        <div class="social-btn x" title="Sign in with X (Twitter)"><svg viewBox="0 0 1200 1227"><path d="M755.6 611.1L1186.7 0H1079.8L710.8 529.4 388.4 0H0L456.5 720.4 0 1227.3H106.9L502.2 682.2 836 1227.3H1224L755.6 611.1ZM571.2 606.3L511.7 515.7 174.2 87.5H338.7L627.7 531.1 686.5 617.7 1040.3 1137.3H875.9L571.2 606.3Z"/></svg></div>
+      </div>
+    </form>
+  </div>
+
+  <!-- Signup Form -->
+    <div class="form-container signin">
+    <h2>Sign Up</h2>
+    <form id="signupForm" aria-label="Sign up form">
+      <label for="signupUsername" class="sr-only">Username</label>
+      <input id="signupUsername" name="username" type="text" placeholder="Username" required />
+      <label for="signupEmail" class="sr-only">Email</label>
+      <input id="signupEmail" name="email" type="email" placeholder="Email" required />
+      <label for="signupPassword" class="sr-only">Password</label>
+      <input id="signupPassword" name="password" type="password" placeholder="Password" required />
+      <label for="signupPassword2" class="sr-only">Confirm Password</label>
+      <input id="signupPassword2" name="confirm_password" type="password" placeholder="Confirm Password" required />
+      <label class="accept-terms"><input name="accept_terms" type="checkbox" required /> I accept the terms &amp; conditions</label>
+      <button type="submit" class="submit-btn">Sign Up</button>
+      <div class="social-login">
+        <div class="social-btn google" title="Sign up with Google"><svg viewBox="0 0 24 24"><path d="M21.805 10.023h-9.31v3.953h5.675c-.234 1.255-1.413 3.685-5.675 3.685-3.417 0-6.195-2.827-6.195-6.31s2.778-6.31 6.195-6.31c1.943 0 3.25.832 4 1.547l2.728-2.618C16.88 4.256 14.812 3.5 12.062 3.5 6.626 3.5 2 8.012 2 13.5s4.626 10 10.062 10c5.799 0 9.67-4.063 9.67-9.81 0-.662-.067-1.163-.07-1.157z"/></svg></div>
+        <div class="social-btn facebook" title="Sign up with Facebook"><svg viewBox="0 0 24 24"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.326v21.348C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.41c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.466.099 2.797.143v3.243l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.31h3.59l-.467 3.622h-3.123V24h6.116C23.407 24 24 23.407 24 22.674V1.326C24 .593 23.407 0 22.675 0z"/></svg></div>
+        <div class="social-btn github" title="Sign up with GitHub"><svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.207 11.387.6.11.793-.258.793-.577v-2.02c-3.338.726-4.033-1.61-4.033-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.744.084-.729.084-.729 1.205.086 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.776.42-1.305.763-1.605-2.665-.3-5.466-1.333-5.466-5.93 0-1.31.47-2.38 1.236-3.22-.123-.302-.536-1.516.117-3.162 0 0 1.008-.322 3.3 1.23a11.49 11.49 0 013.003-.404c1.02.005 2.045.137 3.003.404 2.29-1.553 3.297-1.23 3.297-1.23.655 1.646.242 2.86.12 3.162.77.84 1.236 1.91 1.236 3.22 0 4.61-2.807 5.625-5.48 5.922.432.372.817 1.103.817 2.222v3.293c0 .321.192.694.8.576C20.565 21.796 24 17.298 24 12c0-6.63-5.373-12-12-12z"/></svg></div>
+        <div class="social-btn x" title="Sign up with X (Twitter)"><svg viewBox="0 0 1200 1227"><path d="M755.6 611.1L1186.7 0H1079.8L710.8 529.4 388.4 0H0L456.5 720.4 0 1227.3H106.9L502.2 682.2 836 1227.3H1224L755.6 611.1ZM571.2 606.3L511.7 515.7 174.2 87.5H338.7L627.7 531.1 686.5 617.7 1040.3 1137.3H875.9L571.2 606.3Z"/></svg></div>
+      </div>
+    </form>
+  </div>
+
+  <!-- Blue Toggle -->
+  <div class="toggle-container">
+    <h2 id="toggleHeading">Don't have an account?</h2>
+    <p id="toggleText">Sign up to get started!</p>
+    <button class="switch-btn" id="toggleBtn">Sign Up</button>
+  </div>
+</div>
+
+<script>
+  const wrapper = document.getElementById('formWrapper');
+  const toggleBtn = document.getElementById('toggleBtn');
+  const toggleHeading = document.getElementById('toggleHeading');
+  const toggleText = document.getElementById('toggleText');
+
+  toggleBtn.addEventListener('click', () => {
+    wrapper.classList.toggle('active');
+
+    if(wrapper.classList.contains('active')){
+      toggleHeading.textContent = "Already have an account?";
+      toggleText.textContent = "Login to your account!";
+      toggleBtn.textContent = "Login";
+    } else {
+      toggleHeading.textContent = "Don't have an account?";
+      toggleText.textContent = "Sign up to get started!";
+      toggleBtn.textContent = "Sign Up";
+    }
+  });
+</script>
+<script src="JS/login-signup.js"></script>
+
+</body>
+</html>

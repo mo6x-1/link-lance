@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Lace | Job Listings</title>
+    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Link Lace</a>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="services.html"><i class="fas fa-th-large"></i> Services</a></li>
+                <li><a href="discover.html"><i class="fas fa-users"></i> Discover Talents</a></li>
+                <li><a href="jobs.html"><i class="fas fa-briefcase"></i> Find Jobs</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <a href="log in sign up.html" class="login-btn">Log In</a>
+            <a href="log in sign up.html" class="signup-btn">Sign Up</a>
+        </div>
+    </header>
+
+    <div class="main-content">
+            <aside class="sidebar">
+            <div class="filter-group">
+                <h3><i class="fas fa-filter"></i> Search Filters</h3>
+            </div>
+            
+            <div class="filter-group">
+                <h3>Budget</h3>
+                <label><input type="checkbox" name="budget" value="100-500"> $3 - $10</label><br>
+                <label><input type="checkbox" name="budget" value="500-1000"> $10 - $20</label><br>
+                <label><input type="checkbox" name="budget" value="1000+"> $30-(More)</label>
+            </div>
+
+            <div class="filter-group">
+                <h3>Job Type</h3>
+                <label><input type="radio" name="job_type" value="fixed"> Fixed Price</label><br>
+                <label><input type="radio" name="job_type" value="hourly"> Hourly</label>
+            </div>
+
+            <div class="filter-group">
+                <h3>Experience Level</h3>
+                <label><input type="checkbox" name="experience" value="beginner"> Beginner</label><br>
+                <label><input type="checkbox" name="experience" value="intermediate"> Intermediate</label><br>
+                <label><input type="checkbox" name="experience" value="expert"> Expert</label>
+            </div>
+        </aside>
+
+        <main class="content-area">
+            <h1>Available Freelance Jobs & Projects</h1>
+            
+            <div class="job-list">
+                <div class="job-card">
+                    <h4>Build an e-commerce store with Shopify</h4>
+                    <div class="job-meta">
+                        <span title="Fixed Price"><i class="fas fa-tag"></i> $10</span>
+                        <span title="Posted 2 days ago"><i class="fas fa-clock"></i> 2 days ago</span>
+                        <span title="Verified client"><i class="fas fa-user-check"></i> Verified client</span>
+                    </div>
+                    <p class="job-description">Looking for an experienced Shopify developer to build a modern clothing store. Must be mobile-friendly and fast-loading...</p>
+                    <div class="job-skills">
+                        <span>Shopify</span>
+                        <span>HTML/CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <a href="#" class="job-apply-btn">Apply Now</a>
+                </div>
+
+                <div class="job-card">
+                    <h4>Technical article writing (5 articles)</h4>
+                    <div class="job-meta">
+                        <span title="Fixed Price"><i class="fas fa-tag"></i> $15</span>
+                        <span title="Posted 5 hours ago"><i class="fas fa-clock"></i> 5 hours ago</span>
+                    </div>
+                    <p class="job-description">Seeking a technical content writer with cybersecurity knowledge to write 5 SEO-optimized articles. Native Arabic writing skills preferred...</p>
+                    <div class="job-skills">
+                        <span>Content Writing</span>
+                        <span>SEO</span>
+                        <span>Arabic</span>
+                    </div>
+                    <a href="#" class="job-apply-btn">Apply Now</a>
+                </div>
+                
+                <div class="job-card">
+                    <h4>Full brand identity design for a startup</h4>
+                    <div class="job-meta">
+                        <span title="Hourly Rate"><i class="fas fa-hourglass-half"></i> $30 / hour</span>
+                        <span title="Posted yesterday"><i class="fas fa-clock"></i> yesterday</span>
+                    </div>
+                    <p class="job-description">We need a senior graphic designer to create a logo, business cards, and marketing templates for a startup. Please attach your portfolio...</p>
+                    <div class="job-skills">
+                        <span>Adobe Illustrator</span>
+                        <span>Figma</span>
+                        <span>Logo Design</span>
+                    </div>
+                    <a href="#" class="job-apply-btn">Apply Now</a>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Link Lace. All rights reserved. <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a></p>
+    </footer>
+
+    <script src="JS/script.js"></script>
+</body>
+</html>
