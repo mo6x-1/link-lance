@@ -346,6 +346,28 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     } catch(e){}
 
+    // --- Scroll Reveal Animations ---
+    const revealElements = document.querySelectorAll('.service-card, .job-card, .talent-card, .sidebar, .hero-content, .featured-services h2');
+    
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    revealElements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+        revealObserver.observe(el);
+    });
+
 });
 
 // End of script.js
